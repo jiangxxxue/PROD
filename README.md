@@ -24,20 +24,25 @@ bash run.sh
 Below are the key experimental results from our study:
 
 ### 1. Main Results
-![Main Results](https://github.com/jiangxxxue/PROD/blob/main/figures/TradeOff.png)  
 <div align="center">
-  <img src="https://github.com/jiangxxxue/PROD/blob/main/figures/TradeOff.png" alt="Main Results" width="50%" />
+  <img src="https://github.com/jiangxxxue/PROD/blob/main/figures/TradeOff.png" alt="Main Results" width="100%" />
 </div>
 *Figure 1: Forget quality versus model utility across different downstream tasks. Points for all unlearning approaches are plotted at identical epochs during the later stages of training.*
 
 ### 2. Application on Different LLMs
-![Ablation Study](https://github.com/jiangxxxue/PROD/blob/main/figures/DifferentLLMs.png)  
+<div align="center">
+  <img src="https://github.com/jiangxxxue/PROD/blob/main/figures/DifferentLLMs.png" alt="Application on Different LLMs" width="50%" />
+</div>
 *Figure 2: The performance of PROD on different LLMs.*
 
 ### 3. Adversarial Attacks
-![Scalability Analysis](https://github.com/jiangxxxue/PROD/blob/main/figures/Attack.png)  
+<div align="center">
+  <img src="https://github.com/jiangxxxue/PROD/blob/main/figures/Attack.png" alt="Adversarial Attacks" width="50%" />
+</div>
 *Figure 3: Comparison of adversarial attack results across different LLM unlearning approaches, showing mean attack effects with maximum and minimum ranges.*
 
 ### 4. Ablation Study
-![Case Study](https://github.com/jiangxxxue/PROD/blob/main/figures/AblationStudy.png)  
+<div align="center">
+  <img src="https://github.com/jiangxxxue/PROD/blob/main/figures/AblationStudy.png" alt="Ablation Study" width="100%" />
+</div>
 *Figure 4: Ablation results on alternative loss function, and the impact of hyperparameters $\mathbf{top\_p}$ and $\mathbf{\alpha}$ in PROD.*
