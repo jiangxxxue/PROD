@@ -21,7 +21,7 @@ bash run.sh
 
 ## Experimental Results
 
-Below are the key experimental results from our study:
+Below are the key experimental results from our work:
 
 ### 1. Main Results
 <div align="center">
