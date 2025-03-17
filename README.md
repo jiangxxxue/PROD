@@ -1,6 +1,6 @@
 # Anonymous Paper Submission: Large Language Model Unlearning for Source Code
 
-This repository contains the code, data, and supplementary materials for the anonymous submission titled **Large Language Model Unlearning for Source Code**.
+This repository contains the code and data for the anonymous submission titled **Large Language Model Unlearning for Source Code**.
 
 
 ## Instructions for Reproducibility
