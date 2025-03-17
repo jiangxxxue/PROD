@@ -52,5 +52,5 @@ Below are the key experimental results from our work:
   <img src="https://github.com/jiangxxxue/PROD/blob/main/figures/AblationStudy.png" alt="Ablation Study" width="100%" />
 </div>
 <p align="center">
-  <b>Figure 4: Ablation results on alternative loss function, and the impact of hyperparameters $\mathbf{top\_p}$ and $\mathbf{\alpha}$ in PROD.</b>
+  <b>Figure 4: Ablation results on alternative loss function, and the impact of hyperparameters top_p and α in PROD.</b>
 </p>
