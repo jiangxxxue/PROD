@@ -1,0 +1,406 @@
+{
+  "builder_name": "parquet",
+  "citation": "",
+  "config_name": "bigcode--starcoderdata",
+  "dataset_size": 61852029161,
+  "description": "",
+  "download_checksums": {
+    "https://huggingface.co/datasets/bigcode/starcoderdata/resolve/9fc30b578cedaec69e47302df72cf00feed7c8c4/python/train-00000-of-00059.parquet": {
+      "num_bytes": 399133539,
+      "checksum": null
+    },
+    "https://huggingface.co/datasets/bigcode/starcoderdata/resolve/9fc30b578cedaec69e47302df72cf00feed7c8c4/python/train-00001-of-00059.parquet": {
+      "num_bytes": 392204274,
+      "checksum": null
+    },
+    "https://huggingface.co/datasets/bigcode/starcoderdata/resolve/9fc30b578cedaec69e47302df72cf00feed7c8c4/python/train-00002-of-00059.parquet": {
+      "num_bytes": 390970907,
+      "checksum": null
+    },
+    "https://huggingface.co/datasets/bigcode/starcoderdata/resolve/9fc30b578cedaec69e47302df72cf00feed7c8c4/python/train-00003-of-00059.parquet": {
+      "num_bytes": 389821885,
+      "checksum": null
+    },
+    "https://huggingface.co/datasets/bigcode/starcoderdata/resolve/9fc30b578cedaec69e47302df72cf00feed7c8c4/python/train-00004-of-00059.parquet": {
+      "num_bytes": 390508507,
+      "checksum": null
+    },
+    "https://huggingface.co/datasets/bigcode/starcoderdata/resolve/9fc30b578cedaec69e47302df72cf00feed7c8c4/python/train-00005-of-00059.parquet": {
+      "num_bytes": 389288067,
+      "checksum": null
+    },
+    "https://huggingface.co/datasets/bigcode/starcoderdata/resolve/9fc30b578cedaec69e47302df72cf00feed7c8c4/python/train-00006-of-00059.parquet": {
+      "num_bytes": 397242510,
+      "checksum": null
+    },
+    "https://huggingface.co/datasets/bigcode/starcoderdata/resolve/9fc30b578cedaec69e47302df72cf00feed7c8c4/python/train-00007-of-00059.parquet": {
+      "num_bytes": 394144463,
+      "checksum": null
+    },
+    "https://huggingface.co/datasets/bigcode/starcoderdata/resolve/9fc30b578cedaec69e47302df72cf00feed7c8c4/python/train-00008-of-00059.parquet": {
+      "num_bytes": 395801762,
+      "checksum": null
+    },
+    "https://huggingface.co/datasets/bigcode/starcoderdata/resolve/9fc30b578cedaec69e47302df72cf00feed7c8c4/python/train-00009-of-00059.parquet": {
+      "num_bytes": 393861970,
+      "checksum": null
+    },
+    "https://huggingface.co/datasets/bigcode/starcoderdata/resolve/9fc30b578cedaec69e47302df72cf00feed7c8c4/python/train-00010-of-00059.parquet": {
+      "num_bytes": 385822996,
+      "checksum": null
+    },
+    "https://huggingface.co/datasets/bigcode/starcoderdata/resolve/9fc30b578cedaec69e47302df72cf00feed7c8c4/python/train-00011-of-00059.parquet": {
+      "num_bytes": 389120484,
+      "checksum": null
+    },
+    "https://huggingface.co/datasets/bigcode/starcoderdata/resolve/9fc30b578cedaec69e47302df72cf00feed7c8c4/python/train-00012-of-00059.parquet": {
+      "num_bytes": 397475364,
+      "checksum": null
+    },
+    "https://huggingface.co/datasets/bigcode/starcoderdata/resolve/9fc30b578cedaec69e47302df72cf00feed7c8c4/python/train-00013-of-00059.parquet": {
+      "num_bytes": 394800950,
+      "checksum": null
+    },
+    "https://huggingface.co/datasets/bigcode/starcoderdata/resolve/9fc30b578cedaec69e47302df72cf00feed7c8c4/python/train-00014-of-00059.parquet": {
+      "num_bytes": 392029229,
+      "checksum": null
+    },
+    "https://huggingface.co/datasets/bigcode/starcoderdata/resolve/9fc30b578cedaec69e47302df72cf00feed7c8c4/python/train-00015-of-00059.parquet": {
+      "num_bytes": 394061593,
+      "checksum": null
+    },
+    "https://huggingface.co/datasets/bigcode/starcoderdata/resolve/9fc30b578cedaec69e47302df72cf00feed7c8c4/python/train-00016-of-00059.parquet": {
+      "num_bytes": 399347830,
+      "checksum": null
+    },
+    "https://huggingface.co/datasets/bigcode/starcoderdata/resolve/9fc30b578cedaec69e47302df72cf00feed7c8c4/python/train-00017-of-00059.parquet": {
+      "num_bytes": 392823938,
+      "checksum": null
+    },
+    "https://huggingface.co/datasets/bigcode/starcoderdata/resolve/9fc30b578cedaec69e47302df72cf00feed7c8c4/python/train-00018-of-00059.parquet": {
+      "num_bytes": 386137784,
+      "checksum": null
+    },
+    "https://huggingface.co/datasets/bigcode/starcoderdata/resolve/9fc30b578cedaec69e47302df72cf00feed7c8c4/python/train-00019-of-00059.parquet": {
+      "num_bytes": 391744861,
+      "checksum": null
+    },
+    "https://huggingface.co/datasets/bigcode/starcoderdata/resolve/9fc30b578cedaec69e47302df72cf00feed7c8c4/python/train-00020-of-00059.parquet": {
+      "num_bytes": 392976174,
+      "checksum": null
+    },
+    "https://huggingface.co/datasets/bigcode/starcoderdata/resolve/9fc30b578cedaec69e47302df72cf00feed7c8c4/python/train-00021-of-00059.parquet": {
+      "num_bytes": 396809292,
+      "checksum": null
+    },
+    "https://huggingface.co/datasets/bigcode/starcoderdata/resolve/9fc30b578cedaec69e47302df72cf00feed7c8c4/python/train-00022-of-00059.parquet": {
+      "num_bytes": 391009050,
+      "checksum": null
+    },
+    "https://huggingface.co/datasets/bigcode/starcoderdata/resolve/9fc30b578cedaec69e47302df72cf00feed7c8c4/python/train-00023-of-00059.parquet": {
+      "num_bytes": 391033131,
+      "checksum": null
+    },
+    "https://huggingface.co/datasets/bigcode/starcoderdata/resolve/9fc30b578cedaec69e47302df72cf00feed7c8c4/python/train-00024-of-00059.parquet": {
+      "num_bytes": 393661613,
+      "checksum": null
+    },
+    "https://huggingface.co/datasets/bigcode/starcoderdata/resolve/9fc30b578cedaec69e47302df72cf00feed7c8c4/python/train-00025-of-00059.parquet": {
+      "num_bytes": 399373961,
+      "checksum": null
+    },
+    "https://huggingface.co/datasets/bigcode/starcoderdata/resolve/9fc30b578cedaec69e47302df72cf00feed7c8c4/python/train-00026-of-00059.parquet": {
+      "num_bytes": 392464331,
+      "checksum": null
+    },
+    "https://huggingface.co/datasets/bigcode/starcoderdata/resolve/9fc30b578cedaec69e47302df72cf00feed7c8c4/python/train-00027-of-00059.parquet": {
+      "num_bytes": 391937337,
+      "checksum": null
+    },
+    "https://huggingface.co/datasets/bigcode/starcoderdata/resolve/9fc30b578cedaec69e47302df72cf00feed7c8c4/python/train-00028-of-00059.parquet": {
+      "num_bytes": 392569988,
+      "checksum": null
+    },
+    "https://huggingface.co/datasets/bigcode/starcoderdata/resolve/9fc30b578cedaec69e47302df72cf00feed7c8c4/python/train-00029-of-00059.parquet": {
+      "num_bytes": 391275564,
+      "checksum": null
+    },
+    "https://huggingface.co/datasets/bigcode/starcoderdata/resolve/9fc30b578cedaec69e47302df72cf00feed7c8c4/python/train-00030-of-00059.parquet": {
+      "num_bytes": 389886224,
+      "checksum": null
+    },
+    "https://huggingface.co/datasets/bigcode/starcoderdata/resolve/9fc30b578cedaec69e47302df72cf00feed7c8c4/python/train-00031-of-00059.parquet": {
+      "num_bytes": 389806229,
+      "checksum": null
+    },
+    "https://huggingface.co/datasets/bigcode/starcoderdata/resolve/9fc30b578cedaec69e47302df72cf00feed7c8c4/python/train-00032-of-00059.parquet": {
+      "num_bytes": 398082575,
+      "checksum": null
+    },
+    "https://huggingface.co/datasets/bigcode/starcoderdata/resolve/9fc30b578cedaec69e47302df72cf00feed7c8c4/python/train-00033-of-00059.parquet": {
+      "num_bytes": 398788013,
+      "checksum": null
+    },
+    "https://huggingface.co/datasets/bigcode/starcoderdata/resolve/9fc30b578cedaec69e47302df72cf00feed7c8c4/python/train-00034-of-00059.parquet": {
+      "num_bytes": 392365588,
+      "checksum": null
+    },
+    "https://huggingface.co/datasets/bigcode/starcoderdata/resolve/9fc30b578cedaec69e47302df72cf00feed7c8c4/python/train-00035-of-00059.parquet": {
+      "num_bytes": 387683748,
+      "checksum": null
+    },
+    "https://huggingface.co/datasets/bigcode/starcoderdata/resolve/9fc30b578cedaec69e47302df72cf00feed7c8c4/python/train-00036-of-00059.parquet": {
+      "num_bytes": 389399748,
+      "checksum": null
+    },
+    "https://huggingface.co/datasets/bigcode/starcoderdata/resolve/9fc30b578cedaec69e47302df72cf00feed7c8c4/python/train-00037-of-00059.parquet": {
+      "num_bytes": 388389774,
+      "checksum": null
+    },
+    "https://huggingface.co/datasets/bigcode/starcoderdata/resolve/9fc30b578cedaec69e47302df72cf00feed7c8c4/python/train-00038-of-00059.parquet": {
+      "num_bytes": 388239423,
+      "checksum": null
+    },
+    "https://huggingface.co/datasets/bigcode/starcoderdata/resolve/9fc30b578cedaec69e47302df72cf00feed7c8c4/python/train-00039-of-00059.parquet": {
+      "num_bytes": 393824649,
+      "checksum": null
+    },
+    "https://huggingface.co/datasets/bigcode/starcoderdata/resolve/9fc30b578cedaec69e47302df72cf00feed7c8c4/python/train-00040-of-00059.parquet": {
+      "num_bytes": 395947909,
+      "checksum": null
+    },
+    "https://huggingface.co/datasets/bigcode/starcoderdata/resolve/9fc30b578cedaec69e47302df72cf00feed7c8c4/python/train-00041-of-00059.parquet": {
+      "num_bytes": 395385135,
+      "checksum": null
+    },
+    "https://huggingface.co/datasets/bigcode/starcoderdata/resolve/9fc30b578cedaec69e47302df72cf00feed7c8c4/python/train-00042-of-00059.parquet": {
+      "num_bytes": 388093306,
+      "checksum": null
+    },
+    "https://huggingface.co/datasets/bigcode/starcoderdata/resolve/9fc30b578cedaec69e47302df72cf00feed7c8c4/python/train-00043-of-00059.parquet": {
+      "num_bytes": 385224603,
+      "checksum": null
+    },
+    "https://huggingface.co/datasets/bigcode/starcoderdata/resolve/9fc30b578cedaec69e47302df72cf00feed7c8c4/python/train-00044-of-00059.parquet": {
+      "num_bytes": 389057584,
+      "checksum": null
+    },
+    "https://huggingface.co/datasets/bigcode/starcoderdata/resolve/9fc30b578cedaec69e47302df72cf00feed7c8c4/python/train-00045-of-00059.parquet": {
+      "num_bytes": 391738347,
+      "checksum": null
+    },
+    "https://huggingface.co/datasets/bigcode/starcoderdata/resolve/9fc30b578cedaec69e47302df72cf00feed7c8c4/python/train-00046-of-00059.parquet": {
+      "num_bytes": 396666816,
+      "checksum": null
+    },
+    "https://huggingface.co/datasets/bigcode/starcoderdata/resolve/9fc30b578cedaec69e47302df72cf00feed7c8c4/python/train-00047-of-00059.parquet": {
+      "num_bytes": 395002198,
+      "checksum": null
+    },
+    "https://huggingface.co/datasets/bigcode/starcoderdata/resolve/9fc30b578cedaec69e47302df72cf00feed7c8c4/python/train-00048-of-00059.parquet": {
+      "num_bytes": 395781144,
+      "checksum": null
+    },
+    "https://huggingface.co/datasets/bigcode/starcoderdata/resolve/9fc30b578cedaec69e47302df72cf00feed7c8c4/python/train-00049-of-00059.parquet": {
+      "num_bytes": 397364630,
+      "checksum": null
+    },
+    "https://huggingface.co/datasets/bigcode/starcoderdata/resolve/9fc30b578cedaec69e47302df72cf00feed7c8c4/python/train-00050-of-00059.parquet": {
+      "num_bytes": 387577536,
+      "checksum": null
+    },
+    "https://huggingface.co/datasets/bigcode/starcoderdata/resolve/9fc30b578cedaec69e47302df72cf00feed7c8c4/python/train-00051-of-00059.parquet": {
+      "num_bytes": 390255966,
+      "checksum": null
+    },
+    "https://huggingface.co/datasets/bigcode/starcoderdata/resolve/9fc30b578cedaec69e47302df72cf00feed7c8c4/python/train-00052-of-00059.parquet": {
+      "num_bytes": 391165665,
+      "checksum": null
+    },
+    "https://huggingface.co/datasets/bigcode/starcoderdata/resolve/9fc30b578cedaec69e47302df72cf00feed7c8c4/python/train-00053-of-00059.parquet": {
+      "num_bytes": 389080291,
+      "checksum": null
+    },
+    "https://huggingface.co/datasets/bigcode/starcoderdata/resolve/9fc30b578cedaec69e47302df72cf00feed7c8c4/python/train-00054-of-00059.parquet": {
+      "num_bytes": 390811130,
+      "checksum": null
+    },
+    "https://huggingface.co/datasets/bigcode/starcoderdata/resolve/9fc30b578cedaec69e47302df72cf00feed7c8c4/python/train-00055-of-00059.parquet": {
+      "num_bytes": 395095129,
+      "checksum": null
+    },
+    "https://huggingface.co/datasets/bigcode/starcoderdata/resolve/9fc30b578cedaec69e47302df72cf00feed7c8c4/python/train-00056-of-00059.parquet": {
+      "num_bytes": 392590302,
+      "checksum": null
+    },
+    "https://huggingface.co/datasets/bigcode/starcoderdata/resolve/9fc30b578cedaec69e47302df72cf00feed7c8c4/python/train-00057-of-00059.parquet": {
+      "num_bytes": 395994092,
+      "checksum": null
+    },
+    "https://huggingface.co/datasets/bigcode/starcoderdata/resolve/9fc30b578cedaec69e47302df72cf00feed7c8c4/python/train-00058-of-00059.parquet": {
+      "num_bytes": 390139473,
+      "checksum": null
+    }
+  },
+  "download_size": 23158890581,
+  "features": {
+    "task_id": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "canonical_solution": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "prompt": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "test": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "entry_point": {
+      "dtype": "string",
+      "_type": "Value"
+    }
+  },
+  "homepage": "",
+  "license": "",
+  "size_in_bytes": 85010919742,
+  "splits": {
+    "train": {
+      "name": "train",
+      "num_bytes": 61852029161,
+      "num_examples": 12866649,
+      "shard_lengths": [
+        110000,
+        108079,
+        110000,
+        108079,
+        110000,
+        108079,
+        110000,
+        108079,
+        110000,
+        108079,
+        110000,
+        108079,
+        110000,
+        108079,
+        100000,
+        110000,
+        108079,
+        100000,
+        108079,
+        100000,
+        108079,
+        110000,
+        108079,
+        110000,
+        118079,
+        110000,
+        108079,
+        110000,
+        108079,
+        110000,
+        108079,
+        110000,
+        108079,
+        100000,
+        108079,
+        110000,
+        118079,
+        110000,
+        108079,
+        110000,
+        108079,
+        110000,
+        108079,
+        110000,
+        108079,
+        110000,
+        108079,
+        110000,
+        108079,
+        110000,
+        108079,
+        110000,
+        108079,
+        110000,
+        108079,
+        110000,
+        108079,
+        110000,
+        108079,
+        110000,
+        108079,
+        110000,
+        108079,
+        110000,
+        108079,
+        110000,
+        108079,
+        110000,
+        108079,
+        110000,
+        108079,
+        110000,
+        108079,
+        110000,
+        118079,
+        110000,
+        108079,
+        110000,
+        108079,
+        110000,
+        108079,
+        110000,
+        108079,
+        110000,
+        108079,
+        110000,
+        118079,
+        108079,
+        110000,
+        108079,
+        110000,
+        108079,
+        110000,
+        108079,
+        110000,
+        108078,
+        110000,
+        100000,
+        108078,
+        100000,
+        108078,
+        110000,
+        108078,
+        110000,
+        108078,
+        110000,
+        108078,
+        110000,
+        108078,
+        110000,
+        108078,
+        110000,
+        108078,
+        110000,
+        108078,
+        110000,
+        108078,
+        110000,
+        18078
+      ],
+      "dataset_name": "parquet"
+    }
+  },
+  "version": {
+    "version_str": "0.0.0",
+    "major": 0,
+    "minor": 0,
+    "patch": 0
+  }
+}
