@@ -27,22 +27,30 @@ Below are the key experimental results from our work:
 <div align="center">
   <img src="https://github.com/jiangxxxue/PROD/blob/main/figures/TradeOff.png" alt="Main Results" width="100%" />
 </div>
-*Figure 1: Forget quality versus model utility across different downstream tasks. Points for all unlearning approaches are plotted at identical epochs during the later stages of training.*
+<p align="center">
+  <b>Figure 1: Forget quality versus model utility across different downstream tasks. Points for all unlearning approaches are plotted at identical epochs during the later stages of training.</b>
+</p>
 
 ### 2. Application on Different LLMs
 <div align="center">
   <img src="https://github.com/jiangxxxue/PROD/blob/main/figures/DifferentLLMs.png" alt="Application on Different LLMs" width="50%" />
 </div>
-*Figure 2: The performance of PROD on different LLMs.*
+<p align="center">
+  <b>Figure 2: The performance of PROD on different LLMs.</b>
+</p>
 
 ### 3. Adversarial Attacks
 <div align="center">
   <img src="https://github.com/jiangxxxue/PROD/blob/main/figures/Attack.png" alt="Adversarial Attacks" width="50%" />
 </div>
-*Figure 3: Comparison of adversarial attack results across different LLM unlearning approaches, showing mean attack effects with maximum and minimum ranges.*
+<p align="center">
+  <b>Figure 3: Comparison of adversarial attack results across different LLM unlearning approaches, showing mean attack effects with maximum and minimum ranges.</b>
+</p>
 
 ### 4. Ablation Study
 <div align="center">
   <img src="https://github.com/jiangxxxue/PROD/blob/main/figures/AblationStudy.png" alt="Ablation Study" width="100%" />
 </div>
-*Figure 4: Ablation results on alternative loss function, and the impact of hyperparameters $\mathbf{top\_p}$ and $\mathbf{\alpha}$ in PROD.*
+<p align="center">
+  <b>Figure 4: Ablation results on alternative loss function, and the impact of hyperparameters $\mathbf{top\_p}$ and $\mathbf{\alpha}$ in PROD.</b>
+</p>
