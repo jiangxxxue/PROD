@@ -16,5 +16,5 @@ pip install -r requirements.txt
 ### 2. Run the Experiments
 Execute the `run.sh` script to run the experiments:
 ```bash
-bash run.sh
+bash run_PROD.sh
 ```
