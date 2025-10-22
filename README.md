@@ -1,11 +1,6 @@
-# Anonymous Paper Submission: Large Language Model Unlearning for Source Code
+# Large Language Model Unlearning for Source Code
 
-This repository contains the code and data for the anonymous submission titled **Large Language Model Unlearning for Source Code**.
-
-
-## Instructions for Reproducibility
-
-To reproduce the results of this study, follow these steps:
+This repository contains the code and data for the paper titled **Large Language Model Unlearning for Source Code**.
 
 ### 1. Set Up the Environment
 Install the required dependencies using `requirements.txt`:
@@ -14,7 +9,7 @@ pip install -r requirements.txt
 ```
 
 ### 2. Run the Experiments
-Execute the `run.sh` script to run the experiments:
+Execute the `run_PROD.sh` script to run the experiments:
 ```bash
 bash run_PROD.sh
 ```
