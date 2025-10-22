@@ -11,10 +11,8 @@ from nltk.translate.bleu_score import sentence_bleu
 from datasets import load_dataset, load_from_disk
 from transformers import set_seed, AutoModelForCausalLM, AutoTokenizer
 
-
 set_seed(42)
 MAX_GENERATION_LENGTH = 1024
-
 
 
 def sample_code_from_llm(args, prompt, model, tokenizer):
@@ -95,7 +93,6 @@ def load_model_tokenizer(args, model_name, model_path):
 
     return generate_code_fn, tokenizer
 
-
 def generate_code_for_tasks(args, except_tasks, save_file):
 
     # open save file
@@ -147,9 +144,9 @@ def generate_code_for_tasks(args, except_tasks, save_file):
 
 def parse_args():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--model_name", default=None)
+    parser.add_argument("--model_name", default="CodeLlama-7b-hf")
     parser.add_argument("--model_path", default=None, help="Directory where a pre-trained LLM or fine-tuned LLM is saved. If None, will load from huggingface cache.",)
-    parser.add_argument("--dataset", default=None, type=str)    
+    parser.add_argument("--dataset", type=str)    
     parser.add_argument("--num-samples", default=1, type=int)
     parser.add_argument("--acctual-num-samples", default=1, type=int)
     parser.add_argument("--temperature", default=0.0, type=float)

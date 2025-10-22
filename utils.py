@@ -67,6 +67,7 @@ def is_complete(dataset, requirement, completion, num_newlines=3):
         return True
         
     return False
+        
 
 
 import math
@@ -135,7 +136,6 @@ def prompt_split_humaneval(prompt, mehotd_name):
     return before_func, signature, comment, test_case
 
 
-
 def __add_line_numbers(code):
     lines = []
     for lineno, line in enumerate(code.split('\n'), 1):
@@ -180,7 +180,7 @@ def truncate_back_no_signature(d):
 
 def load_dataset_my(dataset_name):
     if dataset_name == "MBPP":
-        dataset =load_dataset("mbpp")
+        dataset =load_dataset("mbpp", "sanitized")
         dataset = concatenate_datasets([dataset[k] for k in dataset.keys()])
     elif dataset_name == "HumanEval":
         dataset =load_dataset("openai/openai_humaneval")
@@ -194,7 +194,7 @@ def load_dataset_my(dataset_name):
 
 def load_dataset_map_my(dataset_name):
     if dataset_name == "MBPP":
-        dataset =load_dataset("mbpp")
+        dataset =load_dataset("mbpp", "sanitized")
         dataset = concatenate_datasets([dataset[k] for k in dataset.keys()])
     elif dataset_name == "HumanEval":
         dataset =load_dataset("openai/openai_humaneval")
@@ -228,11 +228,11 @@ def format_prompt(task_id, text, tests, sample_code, num_use_cases=0):
     fn_search = re.search(f"def {fn_name}\s?\(.*\)\s?:", sample_code)
 
     if fn_search is None:
-        raise ValueError(
-            f"Could not find 'def {fn_name}\(.*\):' in code for task {task_id}."
-        )
-    code_prefix = sample_code[: fn_search.end()]
-    prompt = f'{code_prefix}\n{prompt}\t"""\n'
+        print(f"Could not find 'def {fn_name}\(.*\):' in code for task {task_id}.")
+        return prompt, fn_name
+    else:
+        code_prefix = sample_code[: fn_search.end()]
+        prompt = f'{code_prefix}\n{prompt}\t"""\n'
     return prompt, fn_name
 
 
@@ -242,7 +242,6 @@ def find_method_name_mbpp(tests):
     return fn_name
 
 
-# Restrictions: The syntax of the program should be correct
 def get_function_name_body(code):
 
     class FunctionVisitor(ast.NodeVisitor):
@@ -292,18 +291,12 @@ def build_test_method(test_list, test_imports, method_name):
 
 def build_test_method_for_CodeForces(input_output):
     test_method = "def check(candidate):\n"
-    for idx, (input, output) in enumerate(zip(input_output['inputs'], input_output['outputs'])):
+    for input, output in zip(input_output['inputs'], input_output['outputs']):
         try:
             test_method += "\tassert candidate(%r) == %r \n" % (input.strip(), output.strip())
         except:
             test_method += "\tassert candidate(%s) == %s \n" % (input, output)
     return test_method
-
-
-import json
-import os
-import re
-import pdb
 
 
 def truncate(d):
@@ -369,6 +362,7 @@ def post_process_code_for_CodeForces(prompt, code, func_name, m_indent):
     return prompt.replace('\t', m_indent)+'\n'.join(lines)
 
 
+
 import copy
 import astor
 
@@ -395,7 +389,7 @@ class FunctionBodyModifier(ast.NodeTransformer):
 def build_AVG_solutions(solutions):
     AVG_solutions = []
     finder = FunctionBodyFinder(target_func_name= "check")
-    
+
     for sidx, solution in enumerate(solutions):
         solution["task_id"] = str(solution["task_id"]) + "_" + str(sidx)
         test = solution["test"]

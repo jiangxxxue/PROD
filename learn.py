@@ -1,5 +1,5 @@
 import torch
-import os, math
+import math
 
 from dataclasses import dataclass, field
 from transformers import (
@@ -15,17 +15,17 @@ from transformers import AutoModelForCausalLM, AutoTokenizer
 
 set_seed(42)
 import wandb
-file_name = "learn.py"
-wandb.init(project="unlearn_code", name= f"{file_name}")
+wandb.init(project="unlearn_code", name="learn")
 
 @dataclass
 class CustomArguments:
-    model_name: str = field(default=None)
+    model_name: str = field(default='codellama/CodeLlama-7b-hf')
     model_path: str = field(default=None)
     last_checkpoint: str = field(default=None)
-    train_data_path: str = field(default=None)
+    train_data_path: str = field(default='data/starcoder_data')
     max_seq_length: int = field(default=1024)
     lora_rank: int = field(default=16)
+
 
 hf_parser = HfArgumentParser((Seq2SeqTrainingArguments, CustomArguments))
 training_args, custom_args = hf_parser.parse_args_into_dataclasses()
@@ -42,9 +42,7 @@ elif custom_args.model_path is not None:
 else:
     model_path = custom_args.model_name
 
-model = AutoModelForCausalLM.from_pretrained(model_path, 
-                                                device_map = "auto"
-                                            )
+model = AutoModelForCausalLM.from_pretrained(model_path, device_map = "auto")
 model.config.use_cache = False
 model.config.pretraining_tp = 1
 
@@ -54,6 +52,7 @@ except:
     tokenizer = AutoTokenizer.from_pretrained(custom_args.model_name, trust_remote_code=True)
 tokenizer.pad_token = tokenizer.eos_token
 tokenizer.padding_side = "right"
+
 
 from accelerate import Accelerator
 accelerator = Accelerator()
@@ -68,13 +67,7 @@ class WandbCallback(TrainerCallback):
 
 
 class SaveModelCallback(TrainerCallback):
-    """
-    Callback that saves the model after each epoch
-    """
     def on_epoch_end(self, args, state, control, model, **kwargs):
-        """
-        Save the model at the end of each epoch
-        """
         if math.floor(state.epoch) < 100: 
             model_name = custom_args.model_name.split("/")[-1]
             output_dir = training_args.output_dir + "/" + f"learn_{model_name}_epoch{state.epoch}_lr{training_args.learning_rate}"
@@ -121,8 +114,8 @@ with training_args.main_process_first(desc="train dataset map pre-processing"):
     train_dataset = train_dataset.map(
         preprocess_example,
     )
-
 if max_train_samples is not None:
+    # Number of samples might increase during Feature Creation, We select only specified max samples
     max_train_samples = min(len(train_dataset),max_train_samples)
     train_dataset = train_dataset.select(range(max_train_samples))
 
@@ -140,7 +133,8 @@ trainer = Seq2SeqTrainer(
     train_dataset=train_dataset if training_args.do_train else None,
     tokenizer=tokenizer,
     data_collator=data_collator,
-    callbacks=[WandbCallback, SaveModelCallback()],
+    callbacks=[WandbCallback]
+    # callbacks=[WandbCallback, SaveModelCallback()],
 )
 
 old_collator = trainer.data_collator
@@ -151,6 +145,7 @@ if training_args.do_train:
     train_result = trainer.train()
     model_name = custom_args.model_name.split("/")[-1]
     output_dir = training_args.output_dir + "/" + f"learn_{model_name}_epoch{training_args.num_train_epochs}"
+    # trainer.model.save_pretrained(training_args.output_dir)
     trainer.save_model(output_dir)
 
     metrics = train_result.metrics
@@ -166,8 +161,8 @@ if training_args.do_train:
     trainer.save_state()
 
 wandb.alert(
-    title=f"{file_name} Run Finished",
-    text=f"The W&B run of {file_name} has finished.",
+    title="Run Finished",
+    text="The W&B run has finished.",
     level=wandb.AlertLevel.INFO
 )
 

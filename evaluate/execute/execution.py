@@ -8,7 +8,6 @@ from collections import defaultdict
 from concurrent.futures import as_completed, ProcessPoolExecutor
 import logging
 
-# from execute._execution import check_correctness, check_correctness_with_test_cases, check_correctness_T
 from ._execution import check_correctness, check_correctness_with_test_cases, check_correctness_T
 
 logging.basicConfig(

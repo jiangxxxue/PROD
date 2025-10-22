@@ -6,8 +6,9 @@ import pprint
 import torch
 from tqdm import tqdm
 
-from datasets import load_dataset, load_from_disk
+from datasets import load_dataset
 from transformers import set_seed, AutoModelForCausalLM, AutoTokenizer
+
 
 set_seed(42)
 MAX_GENERATION_LENGTH = 300
@@ -101,9 +102,8 @@ def generate_code_for_tasks(args, except_tasks, save_file):
     generate_code_fn, tokenizer = load_model_tokenizer(args, args.model_name, args.model_path)
 
     # load dataset
-    if args.dataset == "HumanEval":
-        dataset = load_dataset("openai/openai_humaneval")
-        dataset = dataset['test']
+    dataset = load_dataset("openai/openai_humaneval")
+    dataset = dataset['test']
     
     for i in tqdm(range(len(dataset))):
         task_id = dataset[i]["task_id"]
@@ -114,8 +114,6 @@ def generate_code_for_tasks(args, except_tasks, save_file):
         # construct prompt
         prompt = dataset[i]["prompt"]
 
-
-        # generate code and write to file
         for completion in generate_code_fn(args, prompt):
             if completion.startswith(" ") and ("Llama" in args.model_name):
                 completion = " " + completion
@@ -131,10 +129,9 @@ def generate_code_for_tasks(args, except_tasks, save_file):
     f.close()
 
 
-
 def parse_args():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--model_name", default=None)
+    parser.add_argument("--model_name", default="CodeLlama-7b-hf")
     parser.add_argument("--model_path", default=None, help="Directory where a pre-trained LLM or fine-tuned LLM is saved. If None, will load from huggingface cache.",)
     parser.add_argument("--dataset", default="HumanEval", type=str)    
     parser.add_argument("--num-samples", default=1, type=int)
